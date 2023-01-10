@@ -34,7 +34,17 @@ use {
   use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
   use 'hrsh7th/cmp-path'     -- { name = 'path' }
   use 'hrsh7th/cmp-cmdline'  -- { name = 'cmdline' }
-  use 'hrsh7th/nvim-cmp'
+  use ({'hrsh7th/nvim-cmp', requires = {{ "kdheepak/cmp-latex-symbols" }, 
+  },
+    sources = {
+  {
+    name = "latex_symbols",
+    option = {
+    strategy = 0,
+    },
+  },
+    },
+  })
 
   use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
   use 'hrsh7th/vim-vsnip'
